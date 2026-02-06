@@ -1,41 +1,41 @@
 /* =========================================
-   1. GLOBAL RESET & VARIABEL (WANI!)
-   Bagian ini mengatur ulang gaya bawaan browser
-   agar tampilan situs Persebaya konsisten.
+   1. GLOBAL RESET & VARIABEL (GEMOY VIBES!)
+   Dibikin gemes biar yang liat langsung senyum.
    ========================================= */
 
 * {
-  margin: 0; /* Menghapus jarak luar (margin) bawaan */
-  padding: 0; /* Menghapus jarak dalam (padding) bawaan */
-  box-sizing: border-box; /* Memastikan padding tidak merusak tata letak */
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Font modern untuk Bonek & Bonita */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Pakai font yang lebih bulat dan ceria */
+  font-family: 'Quicksand', 'Nunito', sans-serif; 
 }
 
 html {
-  scroll-behavior: smooth; /* Efek gulir halus ala serangan balik cepat */
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #ffffff; /* Latar belakang bersih */
-  color: #1A4D2E; /* Teks utama Hijau Kebanggaan */
+  background-color: #fff5f8; /* Pink pucat yang lembut */
+  color: #5d4a66; /* Warna ungu tua biar tetep kebaca tapi soft */
   line-height: 1.6; 
 }
 
 /* =========================================
-   2. HEADER & NAVIGASI (TRIBUN ATAS)
-   Mengatur menu navigasi agar tetap siaga 
-   di atas seperti kiper legendaris.
+   2. HEADER & NAVIGASI (AWAN-AWAN LUCU)
    ========================================= */
 
 header {
-  position: fixed; /* Navigasi nempel di atas */
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #006633; /* Hijau Khas Persebaya */
-  padding: 15px 50px;
+  position: fixed;
+  top: 15px; /* Ngambang dikit biar lucu */
+  left: 5%;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 30px;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Bayangan tegas */
+  border-radius: 50px; /* Bentuk kapsul */
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3); /* Bayangan pink soft */
+  backdrop-filter: blur(5px);
 }
 
 nav {
@@ -47,66 +47,182 @@ nav {
 }
 
 .logo {
-  font-size: 26px;
-  font-weight: 800;
-  color: #ffffff;
+  font-size: 24px;
+  font-weight: 900;
+  color: #ff85a2; /* Warna strawberry */
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 .logo span {
-  color: #FFCC00; /* Kuning aksen Persebaya (Victory Yellow) */
+  color: #ffb7b2; /* Warna peach */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-  transition: color 0.3s;
+  color: #7a6e81;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 nav ul li a:hover {
-  color: #FFCC00; /* Berubah kuning saat diarahkan */
+  color: #ff85a2;
+  letter-spacing: 1px; /* Efek merenggang pas di-hover */
 }
 
 /* =========================================
-   3. BAGIAN HERO (KICK OFF)
-   Tampilan utama penyambutan di Gelora Bung Tomo.
+   3. BAGIAN HERO (PELUKAN HANGAT)
    ========================================= */
 
 .hero {
   height: 100vh;
-  background-color: #006633; /* Dominasi Hijau Lapangan */
+  background: linear-gradient(135deg, #ffdeed 0%, #ffefd5 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #5d4a66;
   padding-top: 60px;
-  gap: 50px;
-}
-
-.hero-content {
-  max-width: 550px;
+  gap: 40px;
 }
 
 .hero-content h1 {
-  font-size: 52px;
-  margin: 10px 0;
-  color: #FFCC00; /* Judul "Salam Satu Nyali" atau sejenisnya */
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #ff7597;
+  text-shadow: 2px 2px 0px #ffffff;
 }
 
 .hero-content p {
-  margin-bottom: 25px;
-  font-size: 20px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .btn-hero {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #ff85a2;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(255, 133, 162, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #ff5e84;
+  transform: translateY(-5px) rotate(-3deg); /* Goyang dikit */
+}
+
+.hero-logo img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Bentuk blob lucu */
+  border: 10px solid #ffffff;
+  box-shadow: 0 15px 30px rgba(255, 182, 193, 0.5);
+  animation: float 3s ease-in-out infinite; /* Efek melayang */
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* =========================================
+   4. PENGATURAN UMUM SEKSI
+   ========================================= */
+
+.container {
+  padding: 80px 12%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #ff85a2;
+  display: inline-block;
+  border-bottom: 5px dotted #ffb7b2; /* Garis bawah bintik-bintik */
+}
+
+/* =========================================
+   5. BAGIAN ABOUT
+   ========================================= */
+
+.about-content {
+  background: white;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 0px #ffdeed; /* Bayangan tebal ala kartun */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   6. BAGIAN PROYEK (GRID KOTAK PERMEN)
+   ========================================= */
+
+.bg-light {
+  background-color: #fff9fb;
+}
+
+.proyek-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+  gap: 25px;
+}
+
+.proyek-card {
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 3px solid #ffdeed;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.proyek-card:hover {
+  transform: scale(1.03);
+  border-color: #ff85a2;
+}
+
+.proyek-info h3 {
+  color: #ff85a2;
+  font-size: 20px;
+}
+
+/* =========================================
+   7. MEDIA SOSIAL (IKON MENTUL-MENTUL)
+   ========================================= */
+
+.medsos-item {
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.medsos-item:hover {
+  transform: scale(1.2) rotate(10deg);
+  color: #ff85a2;
+}
+
+/* =========================================
+   8. FOOTER (BOBO NYENYAK)
+   ========================================= */
+
+footer {
+  background-color: #ff85a2;
+  color: white;
+  padding: 40px;
+  border-radius: 50px 50px 0 0; /* Melengkung di atas */
+  margin-top: 50px;
+}.btn-hero {
   display: inline-block;
   padding: 12px 30px;
   background-color: #FFCC00; /* Tombol Kuning Mencolok */
@@ -408,3 +524,4 @@ footer {
   font-size: 14px; /* Ukuran huruf kecil */
 
 }
+
